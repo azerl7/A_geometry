@@ -38,6 +38,7 @@ document.querySelector(".tbody").addEventListener("click",async(e)=>{
         myAlert(res.data.status,res.data.message);
         getArtiles();//刷新状态
         getCates();
+        location.reload();
     }else if(e.target.classList.contains("accept")){
         aid=e.target.parentNode.parentNode.dataset.aid;
         // console.log(aid);
@@ -51,6 +52,7 @@ document.querySelector(".tbody").addEventListener("click",async(e)=>{
         myAlert(res.data.status,res.data.message);
         getArtiles();//刷新状态
         getCates();
+        location.reload();
     }else{//点击到其他部分就跳转
         // console.log(e.target.parentNode.dataset.aid);
         if(e.target.parentNode.dataset.aid){//笑死我了

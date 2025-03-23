@@ -53,4 +53,5 @@ document.querySelector(".cateS").addEventListener("change",(e)=>{
     selectChoice.cid=e.target.value;
     // console.log(selectChoice.cid);
     getArtiles();
+    getCates();
 });

@@ -11,7 +11,7 @@
  Target Server Version : 80037 (8.0.37)
  File Encoding         : 65001
 
- Date: 23/03/2025 12:22:25
+ Date: 23/03/2025 14:32:16
 */
 
 SET NAMES utf8mb4;
@@ -25,11 +25,11 @@ CREATE TABLE `tb_article`  (
   `aid` int(255) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT COMMENT '文章ID',
   `tittle` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL COMMENT '文章标题',
   `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL COMMENT '文章内容',
-  `face` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NULL DEFAULT 'http://127.0.0.1/imgs/geometry.jpg',
+  `face` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NULL DEFAULT 'http://127.0.0.1/imgs/face/geometry.jpg',
   `uid` int(11) UNSIGNED ZEROFILL NOT NULL COMMENT '创建者ID',
   `cid` int(11) UNSIGNED ZEROFILL NOT NULL COMMENT '所属分类',
-  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建的时间',
-  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '修改的时间',
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建的时间',
+  `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '修改的时间',
   `status` enum('deleted','published','draft','examine') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NULL DEFAULT 'examine' COMMENT '文章状态',
   PRIMARY KEY (`aid`) USING BTREE,
   UNIQUE INDEX `tittle`(`tittle` ASC) USING BTREE,
@@ -39,7 +39,7 @@ CREATE TABLE `tb_article`  (
   INDEX `aid`(`aid` ASC, `status` ASC) USING BTREE,
   CONSTRAINT `cid` FOREIGN KEY (`cid`) REFERENCES `tb_categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `uid` FOREIGN KEY (`uid`) REFERENCES `tb_users` (`uid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 118 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 119 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for tb_categories
@@ -52,7 +52,7 @@ CREATE TABLE `tb_categories`  (
   `status` enum('deleted','nodeleted') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL DEFAULT 'nodeleted',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `name`(`name` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 41 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 42 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for tb_examine
@@ -70,7 +70,7 @@ CREATE TABLE `tb_examine`  (
   INDEX `status`(`status` ASC) USING BTREE,
   INDEX `aidtoall`(`aid` ASC, `status` ASC) USING BTREE,
   CONSTRAINT `aidtoall` FOREIGN KEY (`aid`, `status`) REFERENCES `tb_article` (`aid`, `status`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for tb_managers
@@ -85,7 +85,7 @@ CREATE TABLE `tb_managers`  (
   UNIQUE INDEX `email`(`email` ASC) USING BTREE COMMENT '用户邮箱',
   INDEX `user`(`email` ASC, `uid` ASC, `username` ASC) USING BTREE,
   CONSTRAINT `user` FOREIGN KEY (`email`, `uid`, `username`) REFERENCES `tb_users` (`email`, `uid`, `username`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for tb_users
@@ -96,14 +96,14 @@ CREATE TABLE `tb_users`  (
   `username` varchar(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL,
   `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NOT NULL COMMENT '用户电子邮箱',
-  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NULL DEFAULT 'http://127.0.0.1:7274/imgs/geometry.jpg' COMMENT '用户头像',
+  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NULL DEFAULT 'http://127.0.0.1:7274/imgs/avatar/geometry.jpg' COMMENT '用户头像',
   `nickname` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NULL DEFAULT '新用户' COMMENT '用户昵称',
   `udesc` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_as_cs NULL DEFAULT '占时没有描述' COMMENT '用户描述',
   PRIMARY KEY (`uid`) USING BTREE,
   UNIQUE INDEX `email`(`email` ASC) USING BTREE,
   UNIQUE INDEX `username`(`username` ASC) USING BTREE,
   INDEX `email_2`(`email` ASC, `uid` ASC, `username` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for tr_article
@@ -123,7 +123,7 @@ CREATE TABLE `tr_article`  (
   `time` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id` DESC) USING BTREE,
   INDEX `fr_tr_aid`(`id` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 87 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 114 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Table structure for tr_categories
@@ -141,7 +141,7 @@ CREATE TABLE `tr_categories`  (
   PRIMARY KEY (`id` DESC) USING BTREE,
   INDEX `fr_cid`(`cid` ASC) USING BTREE,
   CONSTRAINT `fr_cid` FOREIGN KEY (`cid`) REFERENCES `tb_categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_as_cs ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Procedure structure for get_atl_page
@@ -163,6 +163,7 @@ delimiter ;
 DROP TRIGGER IF EXISTS `before_update_article`;
 delimiter ;;
 CREATE TRIGGER `before_update_article` BEFORE UPDATE ON `tb_article` FOR EACH ROW insert into tr_article(aid,oldTittle,newTittle,oldContent,newContent,oldFace,newFace,oldStatus,newStatus,time) values(old.aid,old.tittle,new.tittle,old.content,new.content,old.face,new.face,old.status,new.status,now())
+;
 ;;
 delimiter ;
 
@@ -172,6 +173,7 @@ delimiter ;
 DROP TRIGGER IF EXISTS `before_update_tb_categories`;
 delimiter ;;
 CREATE TRIGGER `before_update_tb_categories` BEFORE UPDATE ON `tb_categories` FOR EACH ROW insert into tr_categories(cid,name,oldDescription,newDescription,oldStatus,newStatus,time) values(old.id,old.name,old.description,new.description,old.status,new.status,now())
+;
 ;;
 delimiter ;
 

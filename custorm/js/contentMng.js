@@ -23,7 +23,7 @@ async function setArtileList(){
         }
         const date=new Date(item.created_at);
         item.created_at=date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-        return `<tr>
+        return `<tr data-id="${item.aid}">
                 <td>
                     <div class="img_box">
                         <img src="${item.face}" class="content_face">
@@ -93,14 +93,14 @@ document.querySelector(".last").addEventListener("click",(e)=>{
     }
 });
 document.querySelector(".tbody").addEventListener("click",async(e)=>{
+    const aid=document.querySelector(".editatl").parentNode.dataset.id;
     if(e.target.classList.contains("delatl")){
-        const delId=e.target.parentNode.dataset.id;
         // console.log(delId);//测试点击结果
         const res=await axios({
             url:baseUrl+`/atl/del`,
             method:"post",
             data:{
-                aid:delId
+                aid:aid
             }
         });
         // console.log(res);//查看结果
@@ -110,11 +110,10 @@ document.querySelector(".tbody").addEventListener("click",async(e)=>{
             document.querySelector(".now_page").innerText=`第${queryObj.page}页`;
         }
         setArtileList();
-    }
-});
-document.querySelector(".tbody").addEventListener("click",async(e)=>{
-    if(e.target.classList.contains("editatl")){
-        const aid=e.target.parentNode.dataset.id;
+        location.reload();
+    }else if(e.target.classList.contains("editatl")){
         location.href=`../html/article.html?aid=${aid}`;
+    }else{
+        location.href=`../html/atlcontent.html?aid=${aid}`;
     }
 });

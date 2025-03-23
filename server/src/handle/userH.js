@@ -24,7 +24,7 @@ const login=(req,res)=>{
     const sqlStr0=`select * from tb_users where username=?`;
     db.query(sqlStr0,userinfo.username,(err,result)=>{
         if(err) return res.cc(err);
-        if(result.length>1)return res.cc("登录失败请稍后重试");
+        if(result.length!=1)return res.cc("登录失败请稍后重试");
         const compareSync=bcryptjs.compareSync(userinfo.password,result[0].password);
         if(!compareSync){
             return res.cc("账号或者密码错误请稍后重试");
