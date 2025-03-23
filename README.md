@@ -4,3 +4,4 @@
 对于初学者来说这算一个不错的项目
 
 如果想要使用该项目，需要前往server/src/db/mysql.js文件修改数据库基础配置，并使用geometry_db_02.sql脚本初始化数据库
+如果要使用前后端不在同一个终端上，请进入custorm/js/baseUrl.js修改对应的地址
