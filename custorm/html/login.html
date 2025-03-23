@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometry/login</title>
+    <link rel="shortcut icon" href="../img/geometry.jpg">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/modal.css">
+</head>
+<body>
+    <div class="modal">
+        <div class="content">
+            <div class="header">重置密码
+                <span class="close">&times;</span>
+                <div class="line"></div>
+            </div>
+            <div class="body">
+                <form class="formRe">
+                    <input type="text" name="usn" placeholder="账号">
+                    <input type="password" name="pwd" placeholder="新密码">
+                    <input type="password" name="pwd1" placeholder="确认密码">
+                    <input type="email" name="eml" placeholder="账号绑定的邮箱">
+                </form>
+            </div> 
+            <div class="footer">
+                <div class="line"></div>
+                <input type="button" class="btnRe" value="重置密码" style="color:white;">
+            </div>
+        </div>
+        <div class="bubble b3" id="03">邮箱不能为空</div>
+        <div class="bubble b4" id="04">两次密码不一致</div>
+    </div>
+    <div class="login_box">
+        <h1>登录</h1>
+        <form class="login">
+            <div class="input"><input type="text" placeholder="账号" name="username"></div>
+            <div class="input"><input type="password" placeholder="密码" name="password"></div>
+            <input type="button" value="登录" class="btn">
+        </form>
+        <div class="linka">忘记密码了？<button class="forget">点击这里</button><br>
+        没有账号？<a href="./register.html"><button class="register">点击这里</button></a>
+        </div>
+    </div>
+    <div class="bubble b1" id="01">密码不能为空</div>
+    <div class="bubble b2" id="02">账号不能为空</div>
+    <div class="msg_box">登录成功</div>
+    <script src="../lib/axios.js"></script>
+    <script src="../lib/axios.min.js"></script>
+    <script src="../lib/form-serialize.js"></script>
+    <script src="../js/alertFn.js"></script>
+    <script src="../js/dealmsg.js"></script>
+    <script src="../js/baseUrl.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/modal.js"></script>
+</body>
+</html>

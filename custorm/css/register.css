@@ -1,0 +1,80 @@
+body {
+    padding: 4.5rem;/*必须设置大小才能显示内容晕了，rem是指html的em（根的em）*/
+    margin: 0;
+    background: linear-gradient(90deg,rgba(0,210,210,0.7) 0%,rgba(190,200,240,0.7) 60%);
+}
+.register_box{
+    width:500px;
+    height:500px;
+    background: rgba(1,1,1,0.01);
+    /* backdrop-filter: blur(100px); 背景模糊可以使用上面的替代。。呃 */
+    border: 1px solid;
+    border-image:linear-gradient(to right bottom,rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.1) 60%) 1;
+    box-shadow: 0 5px 5px 5px rgba(0,0,0,0.03);
+    position: absolute; /*简单的对齐中心*/
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+h1{
+    color: white;
+    margin-top: 40px;
+    margin-left:30px;
+}
+.register{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+input{
+    width: 340px;
+    height: 40px;
+    margin-top: 20px;
+    padding-right: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    text-indent:1em;
+    background-color: rgba(255,255,255,0.03);
+    box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.1);
+    font-size: large;
+    outline: none;
+}
+form input::placeholder{
+    color: white;
+}
+form input[type="button"]{
+    width: 80px;
+    height: 40px;
+    margin-top: 40px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    text-indent: 0em;/*消除上面带来的影响*/
+}
+form input[type="button"]:hover{
+    transform: scale(1.1);
+}
+.bubble{
+    color: white;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 150px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 1px 1px 3px 3px rgba(0,0,0,0.1);
+    position: relative;
+    top: -500px;
+    left: 430px;
+}
+.msg_box{
+    border: 2px solid black;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 200px;
+    margin-left: 100px;
+    opacity: 0;
+}

@@ -1,0 +1,79 @@
+.examine{
+    border: 1px solid black;
+    width: 800px;
+    /* height: 100%; */
+    margin: auto;
+    margin-top: 30px;
+}
+.examine .choice_box .tittle{
+    font-size: 24px;
+    font-weight: 700;
+    margin-top:20px ;
+    margin-left:20px ;
+}
+.examine .choice_box .line{
+    width: 90%;
+    border: 1px solid gray;
+    margin-left: 20px;
+}
+.examine .choice_box .cateS select{
+    /* display: block; */
+    width: 150px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.7);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 20px;
+    margin-left:20px ;
+}
+.content_box table{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+}
+.content_box table img{
+    width: 100px;
+    height: 100px;
+}
+.content_box table tbody .status span{
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    border: 0px solid black;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(255, 0, 0);
+}
+.content_box table tbody span[class="rollback"]{
+    text-decoration: underline;
+    color: red;
+}
+.content_box table tbody span[class="rollback"]:hover{
+    cursor: pointer;
+}
+.content_box table tbody span[class="accept"]{
+    text-decoration: underline;
+    color: blue;
+}
+.content_box table tbody span[class="accept"]:hover{
+    cursor: pointer;
+}
+.content_box table tr:hover{
+    background-color: rgba(100,100,100,0.3);
+}
+.msg_box{
+    /* border: 1px solid black; */
+    opacity: 0;
+    border-radius: 3px;
+    color: rgba(210,10,50,1);
+    width: 300px;
+    height: 30px;
+    background-color: rgba(200,155,155,1);
+    text-align: center;
+    line-height: 30px;
+    font-weight: 400;
+    margin: auto;
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.3);
+}

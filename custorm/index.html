@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometry/index</title>
+    <link rel="shortcut icon" href="./img/geometry.jpg">
+    <style>
+    /*css如果想要区分，实力不够的话暴力其实是可以选择的，如果实力不够，还要强性去搞结构，这个结构也不敢是虚构罢了*/
+        *{
+            margin:0px;
+            padding:0px;
+            background-size:cover;
+        }
+        .flow_screen{
+        	width:600px;
+        	height:400px;
+        	/* 轮播图居中 */
+        	margin:1rem auto;
+        	/* 隐藏超出展示容器的内容 */
+        	overflow: hidden;
+        	position: relative;
+        }
+        .flow_screen .bkgImg {
+        	width:3000px;
+        	height:600px;
+        	overflow: hidden;
+        	position: absolute;
+        	/* 开启弹性盒，让图片横向排列 */
+        	display: flex;
+        	animation: run 10s ease infinite;
+        }
+        .flow_screen .bkgImg  img{
+        	width:600px;
+        	height:100%;
+        }        
+        /* 轮播图关键帧 */
+        /* 自动轮播 */
+        @keyframes run {
+        	0%,10%{
+        		/* margin-left: 0; */
+        		transform: translateX(0);
+        	}
+        	20%,30%{
+        		/* margin-left: -1200px;; */
+        		transform: translateX(-600px);
+        	}
+        	40%,50%{
+        		/* margin-left: -2400px; */
+        		transform: translateX(-1200px);
+        	}
+        	60%,70%{
+        		/* margin-left: -3600px; */
+        		transform: translateX(-1800px);
+        	}
+        	80%,90%{
+        		/* margin-left: -4800px; */
+        		transform: translateX(-2400px);
+        	}
+        	100%{
+        		/* margin-left: 0; */
+        		transform: translateX(0);
+        	}
+        }
+    </style>
+    <link rel="stylesheet" href="./css/animation.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body class="win">
+    <div class="all_header"><!--信息获取栏（头部）-->
+        <div class="header"><!--顶部-->
+            <div class="search">
+                <input type="text" class="searchInput" name="search">
+                <input type="button" class="searchBtn" value="搜索">
+                <ul class="search_list">
+                    <!-- <li class="tittle-item" data-id="1">你好</li>
+                    <li class="tittle-item" data-id="2">小明</li>
+                    <li class="tittle-item" data-id="1">你好</li>
+                    <li class="tittle-item" data-id="2">小明</li>
+                    <li class="tittle-item" data-id="1">你好</li>
+                    <li class="tittle-item" data-id="2">小明</li> -->
+                </ul>
+            </div>
+            <div class="user_bar">
+                <ul>
+                    <li>
+                        <img class="user_barImg avatar" src="http://127.0.0.1:7274/imgs/avatar/geometry.jpg" name="avatar" alt="用户头像" data-va="./html/usersinfo.html">
+                    </li>
+                    <li>
+                        <!-- 内容管理 -->
+                        <img class="user_barImg" src="./img/内容.png" alt="" data-va="./html/contentMng.html">
+                    </li>
+                    <li>
+                        <!-- 发布文章 -->
+                        <img class="user_barImg" src="./img/发布.png" alt="" data-va="./html/article.html">
+                    </li>
+                    <li>
+                        <!-- <a href="./html/login.html">更换账号</a> -->
+                        <img class="user_barImg" src="./img/更换账号.png" alt="" data-va="./html/login.html">
+                    </li>
+                    <li>
+                        <!-- 退出登录 -->
+                         <img class="user_barImg" name="loginOut" src="./img/退出登录.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="cate">
+            为分类栏留一个位置
+        </div> -->
+    </div>
+    <div class="layout"><!--基本展示页-->
+        <div class="flow_screen">
+            <div class="bkgImg">
+                <img src="./img/Dog_Town.jpg" alt="">
+                <img src="./img/Wall_TX.jpg" alt="">
+                <img src="./img/soldier.png" alt="">
+                <img src="./img/对魔.png" alt="">
+                <img src="./img/大头流萤.jpg" alt="">
+            </div>
+            <div class="point">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- <span class="left"><</span> 
+            <span class="right">></span> -->
+        </div>
+        <div class="layout_table">
+            <table>
+                <tbody class="tbody"><!--随机展示后台分页的数据-->
+                    <tr id="0">
+                        <!-- 保留结构方便调试 -->
+                        <!-- <td>
+                            <div class="article">
+                                <div class="articleImg">
+                                    <img src="./img/对魔.png" alt="" class="articleImg">
+                                </div>
+                                <div class="articleTT">
+                                    <span class="articleTTs">文章标题</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="article">
+                                <div class="articleImg">
+                                    <img src="./img/对魔.png" alt="" class="articleImg">
+                                </div>
+                                <div class="articleTT">
+                                    <span class="articleTTs">文章标题</span>
+                                </div>
+                            </div>
+                        </td> -->
+                    </tr>
+                    <tr id="1">
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" value="随机" class="flush">
+        </div>
+    </div>
+    <script src="./lib/axios.js"></script>
+    <script src="./lib/axios.min.js"></script>
+    <script src="./lib/form-serialize.js"></script>
+    <script src="./js/token.js"></script>
+    <script src="./js/baseUrl.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        // document.querySelector()
+    </script>
+</body>
+</html>

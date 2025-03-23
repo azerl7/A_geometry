@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometry/usersinfo</title>
+    <link rel="shortcut icon" href="../img/geometry.jpg">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            background-size:auto;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/usersinfo.css">
+</head>
+<body>
+    <div class="admin_box">
+        <button id="cateMng">分类管理</button><br>
+        <!-- <button>测试使用的按钮</button><br>
+        <button>测试使用的按钮</button><br>
+        <button>测试使用的按钮</button><br> -->
+        <button id="allAtl" class="button_end">文章审核</button>
+    </div>
+    <div class="usersinfo">
+        <div class="msg_box">更新失败</div>
+        <div class="tittle">用户信息</div>
+        <div class="line"></div>
+        <form class="usersinfoF">
+            <div class="email_box">
+                <div class="tittle_s">邮箱</div>
+                <input type="text" class="email" name="email">
+            </div>
+            <div class="nickname_box">
+                <div class="tittle_s">昵称</div>
+                <input type="text" class="nickname" name="nickname">
+            </div>
+            <div class="udesc_box">
+                <div class="tittle_s">个人简介</div>
+                <textarea name="udesc" class="udesc" id="udesc"></textarea>
+            </div>
+            <div class="avatar_box">
+                <div class="tittle_s">头像</div>
+                <input type="file" id="avatarInput" class="avatarInput" value="更换头像"    style="display:none;">
+                <img src="" alt="" class="avatarimg"><br>
+                <label for="avatarInput" class="avatar_lab">更换头像</label>
+            </div>
+            <input type="button" value="提交" class="submit">
+        </form>
+    </div>
+    <script src="../lib/axios.js"></script>
+    <script src="../lib/axios.min.js"></script>
+    <script src="../lib/form-serialize.js"></script>
+    <script src="../js/token.js"></script>
+    <script src="../js/alertFn.js"></script>
+    <script src="../js/dealmsg.js"></script>
+    <script src="../js/baseUrl.js"></script>
+    <script src="../js/usersinfo.js"></script>
+    <script>
+    </script>
+</body>
+</html>

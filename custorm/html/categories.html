@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometry/categories</title>
+    <link rel="shortcut icon" href="../img/geometry.jpg">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            background-size:cover;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+<body>
+    <div class="modal modal_add">
+        <div class="content">
+            <div class="header">添加分类<span class="close">&times;</span></div>
+            <div class="body">
+                <form class="addcateF" name="addcateF">
+                    <!-- <div class="id">分类序ID<br><input type="text" name="id" placeholder="分类序号">
+                    </div> -->
+                    <div class="name">分类名称<br><input type="text" name="name" placeholder="分类名称">
+                    </div>
+                    <div class="description">分类描述<br><input type="text" name="description"      placeholder="分类描述"></div>
+                    </div>
+                    <div class="footer">
+                        <input type="button" class="saveEidtcate" value="添加">
+                    </div>
+                </form>
+        </div>
+    </div>
+    <div class="modal modal_edit">
+        <div class="content">
+            <div class="header">修改分类<span class="close">&times;</span></div>
+            <div class="body">
+                <form class="editcateF" name="editcateF">
+                    <div class="id" style="display: none;">分类序ID<br><input class="editidInput" type="text" name="id" placeholder="分类序号">
+                    </div>
+                    <div class="name">分类名称<br><input class="editnameInput" type="text" name="name" placeholder="分类名称">
+                    </div>
+                    <div class="description">分类描述<br><input class="editdescriptionInput" type="text" name="description"      placeholder="分类描述"></div>
+                    </div>
+                    <div class="footer">
+                        <input type="button" class="editcate" value="修改">
+                    </div>
+                </form>
+        </div>
+    </div>
+    <div class="categories">
+        <div class="content">
+            <div class="header">分类管理<button class="addcate">+添加</button></div>
+            <div class="body">
+                <table cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>分类序号</th>
+                            <th>分类名</th>
+                            <th>分类描述</th>
+                            <th>操作</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                分类名称
+                            </td>
+                            <td>这是分类</td>
+                            <td>
+                                <span class="delcate">删除</span>
+                                <span class="editcate">编辑</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <span style="font-size: 12px;">是的，不是不让你修改id，是数据库说的不能修改</span>
+        <div>
+            <label for="bg">更换背景</label>
+            <input type="file" class="bg-input" id="bg" style="display: none;">
+        </div>
+    </div>
+    <script src="../lib/axios.js"></script>
+    <script src="../lib/axios.min.js"></script>
+    <script src="../lib/form-serialize.js"></script>
+    <script src="../js/hidden.js"></script>
+    <script src="../js/token.js"></script>
+    <script src="../js/baseUrl.js"></script>
+    <script src="../js/categories.js"></script>
+</body>
+</html>

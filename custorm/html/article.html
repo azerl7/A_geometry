@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Refresh" content="">
+    <title>geometry/content</title>
+    <link rel="shortcut icon" href="../img/geometry.jpg">
+    <link rel="stylesheet" href="../css/wangEditor.css">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            background-size:cover;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/article.css">
+</head>
+<body>
+    <div class="article">
+        <div class="msg_box">发布失败</div>
+        <div class="tittle1">发布文章</div>
+        <div class="line"></div>
+        <div class="content_atl">
+            <form class="articleF">
+                <div class="tittle_box">
+                    <div class="tittle_s">标题</div>
+                    <input type="text" class="tittle" name="tittle">
+                </div>
+                <div class="aid_box">
+                    <div class="tittle_s">文章ID</div>
+                    <input type="text" class="aid" name="aid">
+                </div>
+                <div class="cate_box">
+                    <div class="tittle_s">分类</div>
+                    <select name="categories" id="sel1" class="sel1">
+                        <option value="0">分类</option>
+                    </select>
+                </div>
+                <div class="face_box">
+                    <div class="tittle_s">封面</div>
+                    <label for="face" class="faceLabel place">+</label>
+                    <input type="file" name="face" id="face" class="face" hidden>
+                    <img src class="faceImg place hidden1">
+                    <!-- <input type="text" class="face" name="face"> -->
+                </div>
+                <div class="content_box">
+                    <div class="tittle_s">内容</div>
+                    <div id="editor—wrapper">
+                        <div id="toolbar-container"><!-- 工具栏 --></div>
+                        <div id="editor-container"><!-- 编辑器 --></div>
+                    </div>
+                    <textarea class="content_area" name="content" id="content_area" hidden></textarea>
+                </div>
+                <input type="button" value="发布" class="submit">
+                <input type="button" value="保存" class="save">
+            </form>
+        </div>
+    </div>
+    <script src="../lib/wangEditor.js"></script>
+    <script src="../lib/axios.js"></script>
+    <script src="../lib/axios.min.js"></script>
+    <script src="../lib/form-serialize.js"></script>
+    <script src="../js/token.js"></script>
+    <script src="../js/alertFn.js"></script>
+    <script src="../js/weditCnf.js"></script>
+    <script src="../js/baseUrl.js"></script>
+    <script src="../js/article.js"></script>
+    <script>
+    </script>
+</body>
+</html>

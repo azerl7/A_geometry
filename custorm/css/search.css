@@ -1,0 +1,119 @@
+.search_box{
+    /* border: 1px solid black; */
+    width: 600px;
+    height: 60px;
+    margin: auto;
+    line-height: 60px;
+    position: relative;
+    top: 100px;
+
+    /* left: 50%; */
+    /* transform: translate(-50%,0); */
+    background-color:rgba(255, 255, 255, 0.7);
+    text-align: center;
+    border-radius:30px ;
+}
+.search_box .searchInput{
+    width: 450px;
+    height: 50px;
+    margin-top:5px ;
+    border: 1px solid rgba(100, 100, 100, 0.7);
+    border-radius:20px;
+    /* margin-left: 40px; */
+    position: absolute;
+    left: 20px;
+}
+.search_box .searchInput:focus{
+    outline: 1px solid blue;
+}
+.search_box .searchInput:hover{
+    border: 1px solid blue;
+}
+.search_box .searchBtn{
+    width: 80px;
+    height: 50px;
+    border: 1px solid rgba(100, 100, 100, 0.7);
+    border-radius: 10px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    background-color: rgba(70,150,255,1);
+    color: white;
+}
+.search_box .searchBtn:hover{
+    cursor: pointer;
+}
+.articles_table{
+    /* border: 1px solid black; */
+    width: 90%;
+    /* height: 600px; */
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    top: 200px;
+}
+.articles_table .tbody tr{
+    display: block;
+    /* border: 1px solid black; */
+    /* width: 1500px; */
+    /* height: 300px; */
+    /* background-color: pink; */
+    margin: auto;
+    margin-left: 80px;
+    /* margin-right: 30px; */
+}
+.articles_table .tbody tr td{
+    display: inline-block;
+    /* width: 300px; */
+    /* margin-left: 10px; */
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-left:30px;
+}
+.articles_table .tbody tr td img{
+    width: 300px;
+    height: 200px;
+    border-radius:10px ;
+}
+.articles_table .tbody tr td span{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.articles_table .tbody tr td img:hover{
+    width: 299px;
+    height: 199px;
+    border: 1px solid rgba(0,255,210);
+}
+.articles_table .tbody tr td img:hover,.articles_table .tbody tr td span:hover{
+    cursor: pointer;
+    color: rgba(0,255,210);
+}
+.articles_table .tbody tr td .articleImg:hover + .articleTT {
+    color: rgba(0,255,210);
+}
+.msg_box{
+    /* border: 1px solid black; */
+    opacity: 0;
+    border-radius: 3px;
+    color: rgba(210,10,50,1);
+    width: 300px;
+    height: 30px;
+    background-color: rgba(200,155,155,1);
+    text-align: center;
+    line-height: 30px;
+    font-weight: 400;
+    margin: auto;
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.3);
+}
+.articles_table button{
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    /* margin-left:20px ; */
+    margin-bottom: 20px;
+}
+.articles_table button:hover{
+    cursor: pointer;
+}

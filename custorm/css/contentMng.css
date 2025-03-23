@@ -1,0 +1,134 @@
+.content_all{
+    position: fixed; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.contentMng{
+    margin: auto;
+    /* position: fixed; */
+    /* left: 50%;
+    top: 50%; */
+    /* transform: translate(-50%,-50%); */
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
+    width: 800px;
+    height: 300px;
+}
+.contentMng .msg_box{
+    opacity: 0;
+    height: 40px;
+}
+.contentMng .tittle{
+    font-size: 24px;
+    font-weight: 400;
+    margin-top:0px;
+    margin-left: 20px;
+}
+.contentMng .line{
+    width: 90%;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-left: 20px;
+}
+.contentMng .status_box{
+    /* border: 1px solid black; */
+    margin-left:20px;
+    margin-top: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+.contentMng .status_box input{
+    width: 30px;
+    height: 20px;
+}
+.contentMng .tittle_s{
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 20px;
+    display: inline-block;
+}
+.contentMng .cate_box{
+    /* border: 1px solid black; */
+    margin-left:20px;
+    margin-top: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+.contentMng .cate_box select{
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 150px;
+    height: 30px;
+}
+.contentMng input[type=button]{
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: rgba(70,150,255,1);
+    margin-bottom: 20px;
+    color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.contentMng input[type=button]:hover{
+    cursor: pointer;
+}
+.content_side{
+    width: 800px;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
+    margin-top:50px ;
+}
+.content_side .img_box img{
+    width: 100px;
+    height:100px;
+}
+.content_side table{
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    /* margin-left: 20px; */
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.content_side tbody tr:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+.content_side tbody .status span{
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(255,155,155,0.7);
+    color: rgba(210,10,50,1);
+}
+.content_side tbody .status span[class="blue"]{
+    background-color: rgba(155,255,155,0.7);
+    color: rgba(10,100,10,1);
+}
+.content_side tbody .delatl{
+    text-decoration: underline;
+    color: red;
+}
+.content_side tbody .editatl{
+    text-decoration: underline;
+    color: blue;
+}
+.content_side tbody .delatl:hover,.content_side tbody .editatl:hover{
+    cursor: pointer;
+}
+.content_side button{
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    /* margin-left:20px ; */
+    margin-bottom: 20px;
+}
+.content_side button:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometry/register</title>
+    <link rel="shortcut icon" href="../img/geometry.jpg">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <div class="msg_box">注册成功</div>
+    <div class="register_box">    
+        <h1>注册</h1>
+        <form name="register" class="register">
+            <div class="input"><input type="text" name="username" placeholder="账号" class="count"></div>
+            <div class="input"><input type="password" name="password" placeholder="密码" class="pwd"></div>
+            <div class="input">
+            <input type="password" name="password1" placeholder="确认密码" class="pwd"></div>
+            <div class="input"><input type="email" name="email" placeholder="邮箱" class="email"></div>
+            <input type="button" class="btn" value="注册">
+        </form>
+        <div class="bubble" id="01">账号不能为空</div>
+        <div class="bubble" id="02">密码不能为空</div>
+        <div class="bubble" id="03">两次密码不一致</div>
+        <div class="bubble" id="04">请输入邮箱</div>
+    </div>
+    <script src="../lib/axios.js"></script>
+    <script src="../lib/axios.min.js"></script>
+    <script src="../lib/form-serialize.js"></script>
+    <script src="../js/alertFn.js"></script>
+    <script src="../js/dealmsg.js"></script>
+    <script src="../js/baseUrl.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+</html>

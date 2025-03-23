@@ -1,0 +1,109 @@
+.article {
+    width: 800px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
+    margin: auto;
+    position: fixed;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.article .tittle1{
+    font-size: 36px;
+    font-weight: 400;
+    margin-top:16px;
+    margin-left: 20px;
+}
+.article .line{
+    width: 80%;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-left: 20px;
+}
+.articleF{
+    position: relative;
+}
+.articleF .aid_box{
+    display: none;
+}
+.articleF .tittle_s{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top:16px;
+    margin-left: 20px;
+    /* margin-bottom: 16px; */
+}
+.articleF input,.articleF select{
+    width: 300px;
+    height: 30px;
+    margin-left: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+.articleF .face_box .place{ 
+    display: block;
+    margin-left: 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: rgba(0,0,0,0.2);
+    font-size: 30px;
+    font-weight: 700;
+}
+.articleF .face_box .place:hover{
+    cursor: pointer;
+}
+.articleF .face_box .show1{
+    display: block;
+}
+.articleF .face_box .hidden1{
+    display: none;
+}
+.articleF .content_box{
+    width: 640px;
+    height: 450px;
+}
+.atricleF .content_area{
+    margin-left:20px;
+    resize: none;
+}
+.articleF .submit{
+    background-color: rgba(70,150,255,1);
+    margin-bottom: 20px;
+    color: white;
+}
+.article .submit:hover,.articleF .save:hover{
+    cursor: pointer;
+}
+.articleF .save{
+    border:1px solid rgba(0,0,0,0.1) ;
+}
+.msg_box{
+    /* border: 1px solid black; */
+    opacity: 0;
+    border-radius: 3px;
+    color: rgba(210,10,50,1);
+    width: 300px;
+    height: 30px;
+    background-color: rgba(200,155,155,1);
+    text-align: center;
+    line-height: 30px;
+    font-weight: 400;
+    margin: auto;
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.3);
+}
+#editor—wrapper {
+  border: 1px solid #ccc;
+  z-index: 100; /* 按需定义 */
+  width: 640px;
+  height: 400px;
+  margin-left:20px;
+}
+#toolbar-container {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+#editor-container {
+  height: 300px;
+}

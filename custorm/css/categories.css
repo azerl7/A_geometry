@@ -1,0 +1,158 @@
+html,body {/*确保窗口大小*/
+    margin: 0;
+    padding: 0;
+    min-height:100%;
+}
+.categories{/*用于确定位置,不被弹窗给挤出去*/
+    position: absolute;
+    left: 25%;
+    top:10%;
+    /* transform: translate(-50%,-30%); */
+    z-index: 0.5;
+}
+.categories .content{
+    width: 800px;
+    margin: auto;
+    margin-top: 30px;
+}
+.categories .content .header{
+    position: relative;
+    padding: 16px 8px;
+    font-size: 28px;
+    font-weight: 700;
+}
+.categories .content .header .addcate{
+    float: right;
+    background-color: rgba(70,150,255,1);
+    width: 80px;
+    height: 40px;
+    border:0px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+}
+.categories .addcate:hover{
+    cursor: pointer;
+}
+.categories .content .body table{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.categories .content .body table thead tr{
+    background-color: gray;
+    color: white;
+    height: 40px;
+}
+.categories .content .body table tbody tr{
+    border: 1px solid black;
+}
+.categories .content .body table tbody tr td{
+    padding-top:20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+.categories .delcate{
+    font-size: 14px;
+    color: red;
+    text-decoration: underline;
+}
+.categories .editcate{
+    font-size: 14px;
+    color: blue;
+    text-decoration: underline;
+}
+.categories .content .body table tbody tr td span:hover{
+    cursor: pointer;
+}
+.modal{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index:3;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+    padding-top:280px;
+    /* margin-top: 300px; */
+}
+.modal .content{
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid;
+    border-image: linear-gradient(to right bottom,rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.1)        60%) 1 ;
+    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.03);
+    margin: auto;
+    padding:2px 16px;
+    position:relative;
+    border-radius: 5px;
+    z-index: 3;
+}
+.modal .header{
+    color: black;
+    padding: 2px 0px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+.modal .header span{
+    float: right;
+    font-size: 14px;
+    font-weight: 700;
+}
+.modal .header span:hover{
+    color: rgb(70,150,255);
+    cursor: pointer;
+}
+.modal .body{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.modal .body div{
+    margin-top: 20px;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.modal .body div input{
+    width: 80%;
+    height: 20px;
+}
+.modal .footer{
+    margin-bottom: 20px;
+}
+.modal .footer .saveEidtcate{
+    position: relative;
+    left: 220px;
+    background-color: rgba(70,150,255,1);
+    width: 80px;
+    height: 40px;
+    border:0px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+}
+.modal .footer .saveEidtcate:hover{
+    cursor: pointer;
+}
+.modal .footer .editcate{
+    position: relative;
+    left: 220px;
+    background-color: rgba(70,150,255,1);
+    width: 80px;
+    height: 40px;
+    border:0px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+}
+.modal .footer .editcate:hover{
+    cursor: pointer;
+}
+.bg{
+    width: 190px;
+    height: 108px;
+    border: 1px solid black;
+}

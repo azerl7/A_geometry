@@ -1,0 +1,77 @@
+.modal{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    left:0;
+    top: 0;
+    z-index: 1;
+    overflow: auto;
+    padding-top: 250px;
+}
+.modal .content{
+    width: 400px;
+    background:rgba(190,200,240);
+    border: 1px solid;
+    border-image: linear-gradient(to right bottom,rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.1) 60%) 1 ;
+    box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.03);
+    margin: auto;
+    padding:2px 16px;
+    position:relative;
+}
+.modal .header{
+    color: white;
+    padding: 2px 0px;
+    font-size: 28px;
+    font-weight: 700;
+}
+.close{
+    float: right;
+}
+.close:hover,.close:focus{
+    color: aquamarine;
+    cursor: pointer;
+}
+.modal .header .line{
+    border-bottom: 3px dashed white;
+}
+.modal .body{
+    color: white;
+    border: 0px solid;
+}
+.modal .footer{
+    color: white;
+    margin-top:20px;
+    padding: 2px 0px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.modal .footer .line{
+    border-top: 3px dashed white;
+}
+.modal .content input:hover,.modal .content input:focus{
+    box-shadow: -2px -2px 2px 2px rgba(0,255,210,0.7);
+}
+.modal .content input:nth-child(4){
+    margin-bottom: 20px;
+}
+.modal .content .body input{
+    color: white;
+}
+.modal .content .footer{
+    margin: auto;
+    padding-bottom:20px ;
+}
+.modal .b3{
+    position: absolute;
+    top: 550px;
+    left: 1200px;
+}
+.modal .b4{
+    position: absolute;
+    left: 550px;
+}
+.moadal input::placeholder{
+    color: white;
+}
