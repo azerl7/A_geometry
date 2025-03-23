@@ -7,8 +7,8 @@ const avatar=(req, res) => {
     db.query(sqlStr1,req.user.id,(err,result)=>{
         if(err) return res.cc(err);
         if(result.length!==1) return res.cc("头像查找失败");
-        if(result[0].avatar=="http://127.0.0.1:7274/imgs/avatar/geometry.jpg") {
-            const fileUrl = `http://127.0.0.1:7274/imgs/avatar/${req.file.filename}`; 
+        if(result[0].avatar=="http://0.0.0.0:7274/imgs/avatar/geometry.jpg") {
+            const fileUrl = `http://0.0.0.0:7274/imgs/avatar/${req.file.filename}`; 
             const sqlStr0=`update tb_users set avatar=? where uid=?`;
             db.query(sqlStr0,[fileUrl,req.user.id],(err,result)=>{
                 if(err) return res.cc(err);
@@ -30,7 +30,7 @@ const avatar=(req, res) => {
             const fs=require("fs");
             fs.unlink(filepath,(err)=>{
                 if(err) return res.cc(err);
-                const fileUrl = `http://127.0.0.1:7274/imgs/avatar/${req.file.filename}`; 
+                const fileUrl = `http://0.0.0.0:7274/imgs/avatar/${req.file.filename}`; 
                 const sqlStr0=`update tb_users set avatar=? where uid=?`;
                 db.query(sqlStr0,[fileUrl,req.user.id],(err,result)=>{
                     if(err) return res.cc(err);

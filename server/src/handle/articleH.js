@@ -2,7 +2,7 @@ const db=require("../db/mysql");
 
 const resImgUrl=(req,res)=>{
     if (!req.file) return res.cc("没有文件上传");
-    const fileUrl = `http://127.0.0.1:7274/imgs/face/${req.file.filename}`;
+    const fileUrl = `http://0.0.0.0:7274/imgs/face/${req.file.filename}`;
     return res.send({
         status:0,
         message:"上传图像成功",

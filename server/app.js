@@ -1,7 +1,9 @@
 const express=require("express");
 const app=express();
 const cors=require("cors");
-app.use(cors());
+app.use(cors({
+    origin:"*"
+}));
 app.use(express.json());//处理前端发送过来的json数据
 app.use(express.urlencoded({extended:false}));//处理前端发送过来的的x-www-form-urlencoded数据
 const path=require("path");
